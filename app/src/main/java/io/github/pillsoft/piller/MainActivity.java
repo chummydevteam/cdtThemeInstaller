@@ -70,9 +70,6 @@ public class MainActivity extends ActionBarActivity {
         copyDirTheme = Environment.getExternalStorageDirectory() + "/Themes/Data";
         final Toolbar toolbar = (Toolbar) findViewById(R.id.include);
         setSupportActionBar(toolbar);
-        //Check
-        mLicenseChecker = new EasyLicenseChecker(this, new Handler());
-        mLicenseChecker.start();
 
         ThemeList = new ArrayList<Theme>();
         ThemeNames = getResources().getStringArray(R.array.theme_names);
