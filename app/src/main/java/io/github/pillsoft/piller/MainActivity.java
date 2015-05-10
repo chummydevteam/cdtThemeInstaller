@@ -45,7 +45,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends ActionBarActivity {
-    private EasyLicenseChecker mLicenseChecker;
     protected TextView nameTheme;
     SharedPreferences sharedPreferences;
     private ProgressDialog pd;
@@ -167,18 +166,6 @@ public class MainActivity extends ActionBarActivity {
     public void Link(String link) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
         startActivity(browserIntent);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (mLicenseChecker != null) mLicenseChecker.finish();
-        try {
-            this.delete(new File(copyDirTheme));
-        } catch (IOException e) {
-            Log.d("Error Deleting", "Error on call delete");
-            e.printStackTrace();
-        }
     }
 
     void delete(File f) throws IOException {
