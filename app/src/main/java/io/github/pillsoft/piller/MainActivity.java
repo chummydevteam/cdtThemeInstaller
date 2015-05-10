@@ -72,13 +72,13 @@ public class MainActivity extends ActionBarActivity {
         setSupportActionBar(toolbar);
 
         ThemeList = new ArrayList<Theme>();
-        ThemeNames = getResources().getStringArray(R.array.theme_names);
-        ThemePackages = getResources().getStringArray(R.array.theme_packages);
-        ThemeColors = getResources().getStringArray(R.array.theme_colors);
-        ThemeDarkColors = getResources().getStringArray(R.array.theme_darkcolors);
-        ThemeAccentColors = getResources().getStringArray(R.array.theme_accentcolors);
-        ThemeHighlightedColors = getResources().getStringArray(R.array.theme_highlightedcolors);
-        ThemeMotto = getResources().getStringArray(R.array.theme_motto);
+        ThemeNames = getResources().getStringArray(R.array.theme);
+        ThemePackages = getResources().getStringArray(R.array.package_identifier);
+        ThemeColors = getResources().getStringArray(R.array.primary_color);
+        ThemeDarkColors = getResources().getStringArray(R.array.primary_color_dark);
+        ThemeAccentColors = getResources().getStringArray(R.array.accent);
+        ThemeHighlightedColors = getResources().getStringArray(R.array.accent);
+        ThemeMotto = getResources().getStringArray(R.array.description);
 
         PopulateThemeList();
 
@@ -93,7 +93,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void PopulateThemeList() {
         int i = 0;
-        while (i < getResources().getStringArray(R.array.theme_names).length) {
+        while (i < getResources().getStringArray(R.array.theme).length) {
             ThemeList.add(new Theme(ThemeNames[i], ThemePackages[i], ThemeColors[i], ThemeDarkColors[i], ThemeAccentColors[i], ThemeHighlightedColors[i], ThemeMotto[i]));
             Log.v("Groviee populate", "ADD");
             i++;

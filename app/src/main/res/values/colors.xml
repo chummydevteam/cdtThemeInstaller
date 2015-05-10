@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Color for Toolbar , Statusbar , NavigationBar and Accent -->
-    <color name="colorPrimary">#2d5d82</color>
-    <color name="colorPrimaryDark">#21425d</color>
-    <color name="colorAccent">#01bcd5</color>
+    <color name="colorPrimary">#212021</color>
+    <color name="colorPrimaryDark">#212021</color>
+    <color name="colorAccent">#ffffff</color>
     <color name="colorHighlight">#ffe91e63</color>
     <!-- Color of Text MainActivity -->
     <color name="colorText">@color/white</color>
@@ -15,6 +15,6 @@
     <!-- Color for image on fab -->
     <color name="colorIconFab">@color/white</color>
     <!-- Color for background MainActivity -->
-    <color name="backgroundListTheme">@color/white</color>
+    <color name="backgroundListTheme">@drawable/dark_material</color>
 
 </resources>

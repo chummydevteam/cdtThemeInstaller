@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Theme Names go here-->
-    <string-array name="theme_names"  translatable="false" >
-        <item>Lin</item>
-        <item>Daa</item>
+    <string-array name="accent">
+        <item>\#ffffff</item>
+        <item>\#ffffff</item>
+        <item>\#ffffff</item>
+        <item>\#ffffff</item>
+        <item>\#ffffff</item>
+        <item>\#ffffff</item>
+        <item>\#ffffff</item>
     </string-array>
-
-    <!--Theme Packages go here-->
-    <string-array name="theme_packages"  translatable="false">
-        <item>com.example.theme1</item>
-        <item>com.example.theme2</item>
+    <string-array name="button">
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
     </string-array>
-
-    <!--Theme Motto go here-->
-    <string-array name="theme_motto"  translatable="false">
-        <item>Leak, Coming Soon, Follow me</item>
-        <item>Not now, Fake, Maybe</item>
+    <string-array name="description">
+        <item>"a clean light user interface built from the cleanest base
+"</item>
+        <item>"the first and original black lollipop theme
+"</item>
+        <item>"the first and original dark material lollipop theme
+"</item>
+        <item>"a simplistic android boot animation using a heartbeat motion
+"</item>
+        <item>"a simplistic oneplus boot animation using a heartbeat motion
+"</item>
+        <item>"a simplistic bamboo boot animation using a three dot motion
+"</item>
+        <item>"a flat and sleek boot animation based on a fill bar motion
+"</item>
     </string-array>
-
-    <!--Theme Primary Colors go here-->
-    <string-array name="theme_colors"  translatable="false">
-        <item>#009688</item>
-        <item>#f44336</item>
+    <string-array name="package_identifier">
+        <item>com.chummy.jezebel.azura</item>
+        <item>com.chummy.jezebel.blacked.out</item>
+        <item>com.chummy.jezebel.material.dark</item>
+        <item>com.chummy.jezebel.android</item>
+        <item>com.chummy.jezebel.oneplus</item>
+        <item>com.chummy.jezebel.bamboo</item>
+        <item>com.chummy.jezebel.projectflo</item>
     </string-array>
-
-    <!--Theme Primary Dark Colors go here-->
-    <string-array name="theme_darkcolors"  translatable="false">
-        <item>#00796b</item>
-        <item>#d32f2f</item>
+    <string-array name="primary_color">
+        <item>\#265b2056</item>
+        <item>\#4a000000</item>
+        <item>\#4a212021</item>
+        <item>\#1affffff</item>
+        <item>\#15ffc8bd</item>
+        <item>\#33e8d3ba</item>
+        <item>\#1affa743</item>
     </string-array>
-
-    <!--Theme Accent Colors go here-->
-    <string-array name="theme_accentcolors"  translatable="false">
-        <item>#004d40</item>
-        <item>#536DFE</item>
+    <string-array name="primary_color_dark">
+        <item>\#265b2056</item>
+        <item>\#4a000000</item>
+        <item>\#4a212021</item>
+        <item>\#1affffff</item>
+        <item>\#15ffc8bd</item>
+        <item>\#33e8d3ba</item>
+        <item>\#1affa743</item>
     </string-array>
-
-    <!--Theme highlighted Colors go here-->
-    <string-array name="theme_highlightedcolors"  translatable="false">
-        <item>#4CAF50</item>
-        <item>#448AFF</item>
+    <string-array name="theme">
+        <item>azura - cm12 light theme</item>
+        <item>blacked out! - cm12 black theme</item>
+        <item>dark material - cm12 dark theme</item>
+        <item>minima android - boot animation</item>
+        <item>minima oneplus - boot animation</item>
+        <item>oneplus bamboo - boot animation</item>
+        <item>project flo - boot animation</item>
     </string-array>
 </resources>
