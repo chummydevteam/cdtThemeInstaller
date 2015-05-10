@@ -5,69 +5,45 @@
         <item>\#ffffff</item>
         <item>\#ffffff</item>
         <item>\#ffffff</item>
-        <item>\#ffffff</item>
-        <item>\#ffffff</item>
-        <item>\#ffffff</item>
     </string-array>
     <string-array name="button">
         <item>\#1affffff</item>
         <item>\#1affffff</item>
         <item>\#1affffff</item>
         <item>\#1affffff</item>
-        <item>\#1affffff</item>
-        <item>\#1affffff</item>
-        <item>\#1affffff</item>
     </string-array>
     <string-array name="description">
-        <item>"a clean light user interface built from the cleanest base
+        <item>"sleek and minimal dark purple ui for cm12 theme engine
 "</item>
-        <item>"the first and original black lollipop theme
+        <item>"sleek and minimal dark red ui for cm12 theme engine
 "</item>
-        <item>"the first and original dark material lollipop theme
+        <item>"sleek and minimal dark orange ui for cm12 theme engine
 "</item>
-        <item>"a simplistic android boot animation using a heartbeat motion
-"</item>
-        <item>"a simplistic oneplus boot animation using a heartbeat motion
-"</item>
-        <item>"a simplistic bamboo boot animation using a three dot motion
-"</item>
-        <item>"a flat and sleek boot animation based on a fill bar motion
+        <item>"sleek and minimal dark blue ui for cm12 theme engine
 "</item>
     </string-array>
     <string-array name="package_identifier">
-        <item>com.chummy.jezebel.azura</item>
-        <item>com.chummy.jezebel.blacked.out</item>
-        <item>com.chummy.jezebel.material.dark</item>
-        <item>com.chummy.jezebel.android</item>
-        <item>com.chummy.jezebel.oneplus</item>
-        <item>com.chummy.jezebel.bamboo</item>
-        <item>com.chummy.jezebel.projectflo</item>
+        <item>com.chummy.fadi.material.indigo</item>
+        <item>com.chummy.khizar.material.red</item>
+        <item>com.chummy.fadi.material.orange</item>
+        <item>com.chummy.khizar.material.blue</item>
     </string-array>
     <string-array name="primary_color">
         <item>\#265b2056</item>
-        <item>\#4a000000</item>
-        <item>\#4a212021</item>
-        <item>\#1affffff</item>
-        <item>\#15ffc8bd</item>
-        <item>\#33e8d3ba</item>
+        <item>\#1ab30000</item>
         <item>\#1affa743</item>
+        <item>\#0d0000ff</item>
     </string-array>
     <string-array name="primary_color_dark">
         <item>\#265b2056</item>
-        <item>\#4a000000</item>
-        <item>\#4a212021</item>
-        <item>\#1affffff</item>
-        <item>\#15ffc8bd</item>
-        <item>\#33e8d3ba</item>
+        <item>\#1ab30000</item>
         <item>\#1affa743</item>
+        <item>\#0d0000ff</item>
     </string-array>
     <string-array name="theme">
-        <item>azura - cm12 light theme</item>
-        <item>blacked out! - cm12 black theme</item>
-        <item>dark material - cm12 dark theme</item>
-        <item>minima android - boot animation</item>
-        <item>minima oneplus - boot animation</item>
-        <item>oneplus bamboo - boot animation</item>
-        <item>project flo - boot animation</item>
+        <item>amethyst</item>
+        <item>ferocity</item>
+        <item>flamboyance</item>
+        <item>relaxation</item>
     </string-array>
 </resources>
