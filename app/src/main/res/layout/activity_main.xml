@@ -5,27 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <include
         android:id="@+id/include"
         layout="@layout/toolbar" />
+
     <LinearLayout
+        android:id="@+id/linearFirstTheme"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/backgroundListTheme"
-        android:id="@+id/linearFirstTheme"
         android:layout_alignParentEnd="false"
-        android:weightSum="100"
-        android:orientation="vertical"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:background="@color/backgroundListTheme"
+        android:orientation="vertical"
+        android:weightSum="100">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".MainActivity"
             android:background="#ffB0BEC5"
-            />
+            tools:context=".MainActivity" />
 
     </LinearLayout>
 </RelativeLayout>

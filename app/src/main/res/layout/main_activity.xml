@@ -4,16 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <include
-        layout="@layout/toolbar"
-        android:id="@+id/include" />
+        android:id="@+id/include"
+        layout="@layout/toolbar" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
+        android:layout_below="@+id/include"
         android:background="@color/backgroundListTheme"
-        android:layout_below="@+id/include" />
+        tools:context=".MainActivity" />
 
 </RelativeLayout>
