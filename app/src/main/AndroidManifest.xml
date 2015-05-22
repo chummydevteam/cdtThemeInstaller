@@ -23,15 +23,15 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.chummy.jezebel.darkmaterial.colors.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.chummy.jezebel.darkmaterial.colors.ThemeActivity"></activity>
-
-
+        <activity android:name="com.chummy.jezebel.darkmaterial.colors.ThemeActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

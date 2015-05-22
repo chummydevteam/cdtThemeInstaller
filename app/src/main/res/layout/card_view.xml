@@ -26,7 +26,8 @@
             android:layout_margin="@dimen/paddinContentCardDimension"
             android:text="Lin Theme"
             android:textColor="@color/colorTextCard"
-            android:textSize="@dimen/textSize" />
+            android:textSize="@dimen/textSize"
+            android:layout_gravity="center_horizontal" />
 
         <TextView
             android:id="@+id/motto"
@@ -36,7 +37,8 @@
             android:layout_margin="@dimen/paddinContentCardDimension"
             android:text="Medium Text"
             android:textColor="@color/colorTextCard"
-            android:textSize="@dimen/informationThemeSize" />
+            android:textSize="@dimen/informationThemeSize"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 
