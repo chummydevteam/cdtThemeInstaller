@@ -4,41 +4,24 @@
     <string name="app_name">dm // colors</string>
     <string name="action_settings" translatable="false">Settings</string>
 
-
-    <!-- Check License -->
-    <string name="restartAppError">Error occurred while verifying license. Please restart the application after a while.</string>
-    <string name="verifyLicense">Verifying License...</string>
-    <string name="unlicensed_dialog_retry_body">Retry</string>
-    <string name="unlicensed_dialog_title">Ops &#8230;</string>
-    <string name="unlicensed_dialog_body">It seems that this version has not been downloaded from the play store, consider buying the theme, the young developers should be supported, All</string>
-    <string name="dont_allow">The installation of the subjects was not allowed, it seems that this version has been downloaded from playstore</string>
-
-    <!-- Next Update -->
-    <string name="delete_title">Uninstall Theme</string>
-    <string name="color_pick">Pick Theme Color</string>
-
-    <!-- Menù -->
-    <string name="menu_rate">Rate</string>
-    <string name="menu_share">Share</string>
-    <string name="rate_thanks">Thanks for rate , you help me!</string>
-    <string name="menu_mail" translatable="false">Mail</string>
-    <string name="menu_developer">Developer</string>
-    <string name="community_link" translatable="false">https://plus.google.com/u/0/communities/110443044106258058954</string>
-    <string name="menu_ta_community" translatable="false">Community</string>
-    <string name="developer_site" translatable="false">https://plus.google.com/u/0/113213125679066366328/posts</string>
-
+    <!-- Menu -->
+    <string name="menu_rate">Rate the App</string>
+    <string name="menu_share">Share this App</string>
+    <string name="rate_thanks">Thanks for rating!</string>
+    <string name="menu_mail" translatable="false">Contact Nicholas Directly</string>
+    <string name="menu_developer">Developer\'s XDA Profile</string>
+    <string name="community_link" translatable="false">https://plus.google.com/u/1/communities/104086528025432169285</string>
+    <string name="menu_ta_community" translatable="false">Google+ Community</string>
+    <string name="developer_site" translatable="false">http://forum.xda-developers.com/member.php?u=3605033</string>
 
     <!-- String for Mail developer -->
-    <string name="email_address" translatable="false">fagioli.giulio@gmail.com</string>
+    <string name="email_address" translatable="false">chummydevteam@gmail.com</string>
     <string name="application_error">Error</string>
-
 
     <!-- Theme Activity -->
     <string name="default_string_installbutton">Install Theme</string>
     <string name="alreadyInstalled">is already installed.</string>
-    <string name="installString">Install</string>
-    <string name="goingToInstal">You are going to install</string>
-    <string name="afterInstallInfo">For more details , screenshot and leaks visit the community on Google Plus. \nThanks!</string>
-
-
+    <string name="installString">ATTENTION</string>
+    <string name="goingToInstal">You are going to install - \'dark material //</string>
+    <string name="afterInstallInfo">\n\nPlease wait up to 5 seconds before pressing OK to continue the installation. This allows the theme package to be copied onto the internal SD. \n\n\nThis is due to the theme being bigger than the average theme, thank you for understanding!</string>
 </resources>
