@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="accent">
-        <item>\#ffffff</item>
-        <item>\#ffffff</item>
-        <item>\#ffffff</item>
-        <item>\#ffffff</item>
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
+        <item>\#1affffff</item>
     </string-array>
     <string-array name="button">
         <item>\#1affffff</item>
