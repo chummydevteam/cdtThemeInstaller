@@ -175,7 +175,7 @@ public class ThemeActivity extends ActionBarActivity {
 
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(ThemeActivity.this);
         alertDialog.setTitle(getResources().getString(R.string.installString));
-        alertDialog.setMessage(getResources().getString(R.string.goingToInstal) + " " + ThemeName + ". \n" + getResources().getString(R.string.afterInstallInfo));
+        alertDialog.setMessage(getResources().getString(R.string.goingToInstal) + " " + ThemeName + "'. \n" + getResources().getString(R.string.afterInstallInfo));
 
         CopyThemeTask task = new CopyThemeTask();//Copy the selected theme in /Themes/
         task.execute();
