@@ -104,7 +104,7 @@ public class ThemeActivity extends ActionBarActivity {
 
         if (PackageInstalled(ThemePackage)) {
             installButton.setClickable(true);
-            installButton.setImageDrawable(getResources().getDrawable(R.drawable.minus));
+            installButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_uninstall_icon));
             installButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -115,7 +115,7 @@ public class ThemeActivity extends ActionBarActivity {
 
         } else {
             installButton.setClickable(true);
-            installButton.setImageDrawable(getResources().getDrawable(R.drawable.plus));
+            installButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_install_icon));
             installButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -149,7 +149,7 @@ public class ThemeActivity extends ActionBarActivity {
         if (PackageInstalled(ThemePackage)) {
             //clean of the /Themes/ folder
             installButton.setClickable(true);
-            installButton.setImageDrawable(getResources().getDrawable(R.drawable.minus));
+            installButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_uninstall_icon));
             installButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -160,7 +160,7 @@ public class ThemeActivity extends ActionBarActivity {
             delete(new File(Environment.getExternalStorageDirectory() + "/Themes/"));
         } else {
             installButton.setClickable(true);
-            installButton.setImageDrawable(getResources().getDrawable(R.drawable.plus));
+            installButton.setImageDrawable(getResources().getDrawable(R.drawable.ic_install_icon));
             installButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
