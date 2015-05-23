@@ -5,8 +5,10 @@
         <item>\#1affffff</item>
         <item>\#1affffff</item>
         <item>\#1affffff</item>
+        <item>\#1affffff</item>
     </string-array>
     <string-array name="button">
+        <item>\#1affffff</item>
         <item>\#1affffff</item>
         <item>\#1affffff</item>
         <item>\#1affffff</item>
@@ -21,29 +23,35 @@
 "</item>
         <item>"sleek and minimal dark blue ui for cm12 theme engine
 "</item>
+        <item>"stock google material dark design for cm12 theme engine
+"</item>
     </string-array>
     <string-array name="package_identifier">
         <item>com.chummy.jezebel.darkmaterial.amethyst</item>
         <item>com.chummy.jezebel.darkmaterial.ferocity</item>
         <item>com.chummy.jezebel.darkmaterial.flamboyance</item>
         <item>com.chummy.jezebel.darkmaterial.relaxation</item>
+        <item>com.chummy.jezebel.darkmaterial.stockgoogle</item>
     </string-array>
     <string-array name="primary_color">
         <item>\#265b2056</item>
         <item>\#1ab30000</item>
         <item>\#1affa743</item>
         <item>\#0d0000ff</item>
+        <item>\#1a009688</item>
     </string-array>
     <string-array name="primary_color_dark">
         <item>\#265b2056</item>
         <item>\#1ab30000</item>
         <item>\#1affa743</item>
         <item>\#0d0000ff</item>
+        <item>\#1a009688</item>
     </string-array>
     <string-array name="theme">
         <item>amethyst</item>
         <item>ferocity</item>
         <item>flamboyance</item>
         <item>relaxation</item>
+        <item>stock google</item>
     </string-array>
 </resources>
