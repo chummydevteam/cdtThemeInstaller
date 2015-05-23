@@ -23,10 +23,10 @@
 "</item>
     </string-array>
     <string-array name="package_identifier">
-        <item>com.chummy.fadi.material.indigo</item>
-        <item>com.chummy.khizar.material.red</item>
-        <item>com.chummy.fadi.material.orange</item>
-        <item>com.chummy.khizar.material.blue</item>
+        <item>com.chummy.jezebel.darkmaterial.amethyst</item>
+        <item>com.chummy.jezebel.darkmaterial.ferocity</item>
+        <item>com.chummy.jezebel.darkmaterial.flamboyance</item>
+        <item>com.chummy.jezebel.darkmaterial.relaxation</item>
     </string-array>
     <string-array name="primary_color">
         <item>\#265b2056</item>

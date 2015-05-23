@@ -15,30 +15,31 @@
         android:layout_height="fill_parent"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/include2"
-
         android:background="#000000">
 
         <LinearLayout
             android:id="@+id/gallery_image"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="horizontal"></LinearLayout>
+            android:orientation="horizontal">
+
+        </LinearLayout>
 
     </HorizontalScrollView>
 
     <ImageButton
         android:id="@+id/fab"
         style="@style/FloatingActionButton"
-        android:src="@drawable/ic_install_icon"
-        android:contentDescription="@null"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:layout_width="250dp"
         android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:clickable="true"
+        android:contentDescription="@null"
         android:focusable="true"
         android:focusableInTouchMode="false"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:src="@drawable/ic_install_icon" />
 
 </RelativeLayout>

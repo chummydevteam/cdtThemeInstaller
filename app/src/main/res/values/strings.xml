@@ -21,7 +21,7 @@
     <!-- Theme Activity -->
     <string name="default_string_installbutton">Install Theme</string>
     <string name="alreadyInstalled">is already installed.</string>
-    <string name="installString">ATTENTION</string>
+    <string name="installString">ATTENTION!</string>
     <string name="goingToInstal">You are going to install - \'dark material //</string>
-    <string name="afterInstallInfo">\n\nPlease wait up to 5 seconds before pressing OK to continue the installation. This allows the theme package to be copied onto the internal SD. \n\n\nThis is due to the theme being bigger than the average theme, thank you for understanding!</string>
+    <string name="afterInstallInfo">\n\nPlease wait up to 5 seconds before pressing OK to continue the installation. This allows the theme package to be copied onto the internal SD. \n\n\nThis is due to the theme being bigger than the average theme, thank you for understanding! \n\n\nIf there are any bugs, please don\'t hesitate to contact Nicholas directly on the main menu, or join the G+ community to see if others have the same problem. \n\n\nWe hope you enjoy the theme!</string>
 </resources>

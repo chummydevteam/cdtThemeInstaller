@@ -23,22 +23,22 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/paddinContentCardDimension"
             android:text="Lin Theme"
             android:textColor="@color/colorTextCard"
-            android:textSize="@dimen/textSize"
-            android:layout_gravity="center_horizontal" />
+            android:textSize="@dimen/textSize" />
 
         <TextView
             android:id="@+id/motto"
             android:layout_width="wrap_content"
 
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/paddinContentCardDimension"
             android:text="Medium Text"
             android:textColor="@color/colorTextCard"
-            android:textSize="@dimen/informationThemeSize"
-            android:layout_gravity="center_horizontal" />
+            android:textSize="@dimen/informationThemeSize" />
 
     </LinearLayout>
 
