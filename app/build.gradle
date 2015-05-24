@@ -7,8 +7,8 @@ android {
         applicationId 'com.chummy.jezebel.darkmaterial.colors'
         minSdkVersion 21
         targetSdkVersion 21
-        versionCode 7
-        versionName '1.07'
+        versionCode 77
+        versionName 'seventyseven'
     }
     buildTypes {
         release {
