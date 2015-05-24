@@ -10,6 +10,9 @@ android {
         versionCode 77
         versionName 'seventyseven'
     }
+    lintOptions {
+        abortOnError false
+    }
     buildTypes {
         release {
             minifyEnabled false
