@@ -7,8 +7,8 @@ android {
         applicationId 'com.chummy.jezebel.darkmaterial.colors'
         minSdkVersion 21
         targetSdkVersion 21
-        versionCode 85
-        versionName 'eightyfive'
+        versionCode 86
+        versionName 'eightysix'
     }
     lintOptions {
         abortOnError false
