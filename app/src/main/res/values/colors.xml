@@ -13,9 +13,6 @@
     <color name="white">@android:color/white</color>
     <!-- Color for image on fab -->
     <color name="colorIconFab">@color/white</color>
-    <!-- Color for background MainActivity -->
-    <color name="backgroundListTheme">@drawable/dark_material</color>
-
+    <!-- Ripple Color-->
     <color name="ripple_color">#4a777777</color>
-
 </resources>

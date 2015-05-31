@@ -17,7 +17,7 @@
         android:layout_alignParentEnd="false"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/backgroundListTheme"
+        android:background="@drawable/dark_material"
         android:orientation="vertical"
         android:weightSum="100">
 
