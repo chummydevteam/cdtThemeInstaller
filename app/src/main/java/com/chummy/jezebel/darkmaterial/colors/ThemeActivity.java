@@ -190,7 +190,7 @@ public class ThemeActivity extends ActionBarActivity {
                 intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/Themes/" + FileName)), "application/vnd.android.package-archive");
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-          
+          this.isFileCopied = false;
     }
 
     void delete(File file) {
