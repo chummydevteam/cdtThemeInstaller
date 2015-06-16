@@ -178,13 +178,15 @@ public class ThemeActivity extends ActionBarActivity {
         final Dialog dialog = new Dialog(this);
 		dialog.setContentView(R.layout.progress);
 		dialog.setTitle("Copying");
-        CopyThemeTask task = new CopyThemeTask();//Copy the selected theme in /Themes/
-        task.execute();
+		dialog.create();
 		do {
 			if(!dialog.isShowing())
 			{dialog.show();}
 		} while(!this.isFileCopied);
-		dialog.hide();
+		dialog.dismiss();
+        CopyThemeTask task = new CopyThemeTask();//Copy the selected theme in /Themes/
+        task.execute();
+		
 		
 		//Watch for installation, when it's installed, we can delete old stuff
 		CheckInstallationTask check = new CheckInstallationTask();
