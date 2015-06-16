@@ -186,11 +186,19 @@ public class ThemeActivity extends ActionBarActivity {
 		} while(!this.isFileCopied);
 		dialog.hide();
 		
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/Themes/" + FileName)), "application/vnd.android.package-archive");
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+		//Watch for installation, when it's installed, we can delete old stuff
+		CheckInstallationTask check = new CheckInstallationTask();
+		check.execute();
+		
+          Intent intent = new Intent(Intent.ACTION_VIEW);
+          intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/Themes/" + FileName)), "application/vnd.android.package-archive");
+          intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+          startActivity(intent);
+				
           this.isFileCopied = false;
+		  
+		  
+		  
     }
 
     void delete(File file) {
@@ -342,6 +350,20 @@ public class ThemeActivity extends ActionBarActivity {
             //dismissDialog();
         }
     }
+	
+	
+	private class CheckInstallationTask extends AsyncTask<String, Void, String> {
 
+        @Override
+        protected String doInBackground(String... filename) {
+            String response = "";
+                while(!ThemeActivity.this.PackageInstalled(ThemeActivity.this.ThemePackage)) {
+					; //Stall while not installed
+				}
+				//Now it's installed, we can delete
+			    ThemeActivity.this.deleteFile(ThemeActivity.this.FileName);
+				return response;
+        }
+	}
 }
 
