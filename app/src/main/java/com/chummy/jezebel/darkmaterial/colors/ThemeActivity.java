@@ -50,6 +50,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import android.app.*;
+import android.view.*;
 
 public class ThemeActivity extends ActionBarActivity {
 
@@ -62,6 +64,7 @@ public class ThemeActivity extends ActionBarActivity {
     String ThemeHighlightColor;
     String FileName;
     ImageButton installButton;
+	boolean isFileCopied = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -172,32 +175,22 @@ public class ThemeActivity extends ActionBarActivity {
     }
 
     protected void showDialog() {
-
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(ThemeActivity.this);
-        alertDialog.setTitle(getResources().getString(R.string.installString));
-        alertDialog.setMessage(getResources().getString(R.string.goingToInstall) + " " + ThemeName + "'. \n" + getResources().getString(R.string.afterInstallInfo));
-
+        final Dialog dialog = new Dialog(this);
+		dialog.setContentView(R.layout.progress);
+		dialog.setTitle("Copying");
         CopyThemeTask task = new CopyThemeTask();//Copy the selected theme in /Themes/
         task.execute();
-
-        alertDialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
+		do {
+			if(!dialog.isShowing())
+			{dialog.show();}
+		} while(!this.isFileCopied);
+		dialog.hide();
+		
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/Themes/" + FileName)), "application/vnd.android.package-archive");
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-            }
-        });
-        alertDialog.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-
-                delete(new File(Environment.getExternalStorageDirectory() + "/Themes/"));
-
-                dialog.cancel();
-
-            }
-        });
-        alertDialog.show();
+          
     }
 
     void delete(File file) {
@@ -328,12 +321,16 @@ public class ThemeActivity extends ActionBarActivity {
                 out.flush();
                 out.close();
                 out = null;
+				ThemeActivity.this.isFileCopied = true;
+				response = "Done!";
 
             } catch (Exception e) {
                 Log.e("tag", "Failed to copy asset file: " + FileName, e);
+				ThemeActivity.this.isFileCopied = false;
+				response = "Failed!";
             }
 
-
+		
             return response;
         }
 
