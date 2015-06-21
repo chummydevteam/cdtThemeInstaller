@@ -175,34 +175,26 @@ public class ThemeActivity extends ActionBarActivity {
     }
 
     protected void showDialog() {
-        CopyThemeTask task = new CopyThemeTask();//Copy the selected theme in /Themes/
+        CopyThemeTask task = new CopyThemeTask(); //Copy the selected theme to /Themes/
         task.execute();
-		
-		long toastTime = new java.util.Date().getTime(); //get time before loop
 
-		//We need to do something in this loop to keep from having an anr error
-		//So toast is probably best bet over Thread.sleep()
-		while(!this.isFileCopied) {
-			long cur = new java.util.Date().getTime(); //get time NOW
-			if((toastTime + 1000) >= cur) { //Only after 1 second can we show a toast
-				toastTime = cur;
-				Toast.makeText(this, this.getString(R.string.copying), Toast.LENGTH_SHORT).show();
-			}
-		}
-		
+        try{
+            Thread.sleep(5000);
+        }
+        catch(InterruptedException ie){
+        }
+
 		//Watch for installation, when it's installed, we can delete old stuff
 		CheckInstallationTask check = new CheckInstallationTask();
 		check.execute();
-		
-          Intent intent = new Intent(Intent.ACTION_VIEW);
-          intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/Themes/" + FileName)), "application/vnd.android.package-archive");
-          intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-          startActivity(intent);
-				
-          this.isFileCopied = false;
-		  
-		  
-		  
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/Themes/" + FileName)), "application/vnd.android.package-archive");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+
+            this.isFileCopied = false;
+
     }
 
     void delete(File file) {
@@ -317,7 +309,7 @@ public class ThemeActivity extends ActionBarActivity {
         protected String doInBackground(String... filename) {
             String response = "";
             AssetManager assetManager = getAssets();
-            System.out.println("File name => " + FileName);
+            System.out.println("Installing theme: " + FileName);
             InputStream in = null;
             OutputStream out = null;
             try {
@@ -325,7 +317,6 @@ public class ThemeActivity extends ActionBarActivity {
                 wallpaperDirectory.mkdirs();
 
                 in = assetManager.open("Files/" + FileName);   // if files resides inside the "Files" directory itself
-                System.out.println(FileName);
                 out = new FileOutputStream(Environment.getExternalStorageDirectory().toString() + "/Themes/" + FileName);
                 copyFile(in, out);
                 in.close();
@@ -366,6 +357,7 @@ public class ThemeActivity extends ActionBarActivity {
 				}
 				//Now it's installed, we can delete
 			    ThemeActivity.this.deleteFile(ThemeActivity.this.FileName);
+                System.out.println("Theme Installed. Temporary directory has been removed from internal storage.");
 				return response;
         }
 	}
