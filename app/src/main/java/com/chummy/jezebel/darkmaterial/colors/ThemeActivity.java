@@ -175,25 +175,36 @@ public class ThemeActivity extends ActionBarActivity {
     }
 
     protected void showDialog() {
-        CopyThemeTask task = new CopyThemeTask(); //Copy the selected theme to /Themes/
+        
+        ProgressDialog pd = new ProgressDialog(this);
+		pd.setTitle(this.getString(R.string.copying));
+		pd.setMessage(this.getString(R.string.please_wait));
+		pd.setCancelable(false);
+		pd.setIndeterminate(true);
+		pd.show();
+		
+		CopyThemeTask task = new CopyThemeTask(); //Copy the selected theme to /Themes/
         task.execute();
-
-        try{
-            Thread.sleep(5000);
-        }
-        catch(InterruptedException ie){
-        }
-
+		
+		while(!this.isFileCopied){
+			try {
+				Thread.sleep(500);
+			} catch(InterruptedException ex) {
+				ex.printStackTrace();
+			}
+		}
+		
 		//Watch for installation, when it's installed, we can delete old stuff
 		CheckInstallationTask check = new CheckInstallationTask();
 		check.execute();
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/Themes/" + FileName)), "application/vnd.android.package-archive");
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-
-            this.isFileCopied = false;
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+		
+		pd.cancel();
+        this.isFileCopied = false;
 
     }
 
@@ -208,6 +219,14 @@ public class ThemeActivity extends ActionBarActivity {
 
         file.delete();  // delete child file or empty directory
     }
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data)
+	{
+		// TODO: Implement this method
+		super.onActivityResult(requestCode, resultCode, data);
+	}
+	
 
     public boolean PackageInstalled(String target_package) {
         PackageManager pm = getPackageManager();
