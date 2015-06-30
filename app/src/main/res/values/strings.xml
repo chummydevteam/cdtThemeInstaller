@@ -24,5 +24,5 @@
     <string name="installString">ATTENTION!</string>
     <string name="goingToInstall">You have chosen to install - \'dark material //</string>
     <string name="afterInstallInfo">\n\nPlease wait up to 5 seconds before pressing OK to continue the installation. This allows the theme package to be copied onto the internal SD correctly. \n\n\nIF YOU RECEIVED A PARSING ERROR, YOU HAVE NOT WAITED LONG ENOUGH!</string>
-	<string name="copying">Copying...</string>
+    <string name="copying">Copying...</string>
 </resources>

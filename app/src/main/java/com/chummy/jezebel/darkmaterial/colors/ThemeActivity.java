@@ -19,8 +19,6 @@ Copyright 2015, Giulio Fagioli, Lorenzo Salani
 package com.chummy.jezebel.darkmaterial.colors;
 
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
@@ -50,8 +48,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import android.app.*;
-import android.view.*;
 
 public class ThemeActivity extends ActionBarActivity {
 
@@ -64,7 +60,7 @@ public class ThemeActivity extends ActionBarActivity {
     String ThemeHighlightColor;
     String FileName;
     ImageButton installButton;
-	boolean isFileCopied = false;
+    boolean isFileCopied = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -178,22 +174,21 @@ public class ThemeActivity extends ActionBarActivity {
         CopyThemeTask task = new CopyThemeTask(); //Copy the selected theme to /Themes/
         task.execute();
 
-        try{
+        try {
             Thread.sleep(5000);
-        }
-        catch(InterruptedException ie){
+        } catch (InterruptedException ie) {
         }
 
-		//Watch for installation, when it's installed, we can delete old stuff
-		CheckInstallationTask check = new CheckInstallationTask();
-		check.execute();
+        //Watch for installation, when it's installed, we can delete old stuff
+        CheckInstallationTask check = new CheckInstallationTask();
+        check.execute();
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setDataAndType(Uri.fromFile(new File(Environment.getExternalStorageDirectory() + "/Themes/" + FileName)), "application/vnd.android.package-archive");
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
 
-            this.isFileCopied = false;
+        this.isFileCopied = false;
 
     }
 
@@ -324,16 +319,16 @@ public class ThemeActivity extends ActionBarActivity {
                 out.flush();
                 out.close();
                 out = null;
-				ThemeActivity.this.isFileCopied = true;
-				response = "Done!";
+                ThemeActivity.this.isFileCopied = true;
+                response = "Done!";
 
             } catch (Exception e) {
                 Log.e("tag", "Failed to copy asset file: " + FileName, e);
-				ThemeActivity.this.isFileCopied = false;
-				response = "Failed!";
+                ThemeActivity.this.isFileCopied = false;
+                response = "Failed!";
             }
 
-		
+
             return response;
         }
 
@@ -345,21 +340,21 @@ public class ThemeActivity extends ActionBarActivity {
             //dismissDialog();
         }
     }
-	
-	
-	private class CheckInstallationTask extends AsyncTask<String, Void, String> {
+
+
+    private class CheckInstallationTask extends AsyncTask<String, Void, String> {
 
         @Override
         protected String doInBackground(String... filename) {
             String response = "";
-                while(!ThemeActivity.this.PackageInstalled(ThemeActivity.this.ThemePackage)) {
-					; //Stall while not installed
-				}
-				//Now it's installed, we can delete
-			    ThemeActivity.this.deleteFile(ThemeActivity.this.FileName);
-                System.out.println("Theme Installed. Temporary directory has been removed from internal storage.");
-				return response;
+            while (!ThemeActivity.this.PackageInstalled(ThemeActivity.this.ThemePackage)) {
+                ; //Stall while not installed
+            }
+            //Now it's installed, we can delete
+            ThemeActivity.this.deleteFile(ThemeActivity.this.FileName);
+            System.out.println("Theme Installed. Temporary directory has been removed from internal storage.");
+            return response;
         }
-	}
+    }
 }
 
